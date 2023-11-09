@@ -23,8 +23,8 @@ nav{
 }
 nav img{
   height: 13vh;
-  margin-left: 5vw;
-  transform: scale(2);
+  margin-left: 2vw;
+  transform: scale(2.5);
   
 }
 
@@ -92,7 +92,7 @@ section{
   justify-content: center;
   align-items: center;
   gap: 10px;
-  border-radius: 5px;
+  border-radius: 0.5rem;
   box-shadow: rgba(13, 13, 15, 0.15) 0px 4px 40px 1px;;
 }
 input{

@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200&family=Montserrat:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Poppins:wght@100;200;300;400;600&family=Roboto+Slab&display=swap');
+
+html{
+  scroll-behavior: smooth;
+}
+body{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Slab';
+}
+
+nav{
+  height: 13vh;
+  width: 100vw;
+  font-size: 1.4vw;
+  background-color: white;
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+nav img{
+  height: 13vh;
+  margin-left: 5vw;
+  transform: scale(2);
+  
+}
+
+
+.login {
+  background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+  border: 0;
+  border-radius: 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1.3rem;
+  margin: 2vw;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+.login:not([disabled]):focus {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.login:not([disabled]):hover {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+section{
+    height: 85vh;
+    width: 80vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+    flex-direction: column;
+    margin-left: 20vw;
+}
+.upper-section{
+    font-size: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+     
+}
+.upper-section h1{
+  margin: 0;
+}
+.upper-section p{
+  font-family: 'Kanit';
+  font-weight: 200;
+}
+.input-div{
+  height: 20vh;
+  width:50vw;
+  padding: 10px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  box-shadow: rgba(13, 13, 15, 0.15) 0px 4px 40px 1px;;
+}
+input{
+    height: 15vh;
+    width: 50vw;
+    border: 2px solid rgba(255, 154, 90);
+    border-radius: 30px ;
+    font-size: 1.5rem;
+    font-family: 'Kanit';
+    font-weight: 400;
+    padding-left: 20px;
+}
+::placeholder{
+    font-family: 'Montserrat';
+    font-size: 1.2rem;
+    padding: 0 0 20px 0;
+}
+
+
+.search {
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 1.2rem;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.search:hover {
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+
+.background-circle{
+background: url('./assets/Ellipse_36_1.svg') 1vw 2.7vh / 918px no-repeat rgba(0, 0, 0, 0);
+background-image: url('./assets/Ellipse_36_1.svg');
+background-position-x: -24vw;
+background-position-y: 2.7vh;
+background-size: 918px;
+background-repeat-x: no-repeat;
+background-repeat-y: no-repeat;
+background-attachment: initial;
+background-origin: initial;
+background-clip: initial;
+background-color: rgba(231, 7, 7, 0);
+inset: 0px;
+opacity: 0.05;
+pointer-events: none;
+position: absolute;
+overflow: hidden;
+z-index: -1;
+}

@@ -9,7 +9,53 @@ body{
   padding: 0;
   font-family: 'Roboto Slab';
 }
+.overlay{
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  background: rgba(0,0,0,0.5);
+  height: 100vh;
+  z-index: 0;
+}
+.loginform{
+  width: 30vw;
+  padding: 20px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.loginform span{
+  position: absolute;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  top: 0;
+}
 
+/* .plus {
+  background: #333;
+  height: 3rem;
+  position: relative;
+  width: 0.5rem;
+}
+.plus:after {
+  background: #333;
+  content: "";
+  height: 0.5rem;
+  left: -21px;
+  position: absolute;
+  top: 21px;
+  width: 50px;
+} */
+
+
+.loginform input{
+  width: 90%;
+  height: 35px;
+  margin-bottom: 1rem;
+}
 nav{
   height: 13vh;
   width: 100vw;
@@ -29,7 +75,7 @@ nav img{
 }
 
 
-.login {
+.signup {
   background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
   border: 0;
   border-radius: 12px;
@@ -52,11 +98,11 @@ nav img{
   white-space: nowrap;
 }
 
-.login:not([disabled]):focus {
+.signup:not([disabled]):focus {
   box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
 }
 
-.login:not([disabled]):hover {
+.signup:not([disabled]):hover {
   box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
 }
 
@@ -70,13 +116,13 @@ section{
     margin-left: 20vw;
 }
 .upper-section{
-    font-size: 2rem;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-     
+    font-size: 2rem;
 }
 .upper-section h1{
+  font-size: 4rem;
   margin: 0;
 }
 .upper-section p{

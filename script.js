@@ -1,26 +1,27 @@
-const signupBtn = document.getElementById('signup');
+const loginBtn = document.getElementById('login');
 let newDiv = document.createElement("div");
 
 newDiv.innerHTML = `<div class="overlay"></div>
 <div class="loginform">
-    <div class="plus"></div>
+    
     <form action="">
+        <img src="./assets/close.svg">
         <div>
-            <label for="">UserName</label>
+            <label for="">Username</label>
             <input type="text">
         </div>
         <div>
             <label for="">Password</label>
             <input type="text">
         </div>
-        <button class="signup">Sign Up</button>
+        <button class="login">Login</button>
     </form>
 </div>`
 
 const overlay = newDiv.querySelector('.overlay');
-const closeBtn = newDiv.querySelector('#close');
+const closeBtn = newDiv.querySelector('img');
 
-signupBtn.addEventListener('click', () => {
+loginBtn.addEventListener('click', () => {
     document.body.appendChild(newDiv);
 })
 

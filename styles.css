@@ -9,6 +9,7 @@ body{
   padding: 0;
   font-family: 'Roboto Slab';
 }
+
 .overlay{
   width: 100vw;
   position: fixed;
@@ -58,6 +59,8 @@ nav{
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
+  position: fixed;
+  z-index: 1;
 }
 nav img{
   height: 13vh;
@@ -98,14 +101,18 @@ nav img{
   box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
 }
 
+main{
+  position: relative;
+  overflow: visible;
+}
 section{
-    height: 85vh;
-    width: 80vw;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: start;
+    height: calc(85vh - 8vh);
+    width: 100vw;
+    display: inline-flex;
+    align-items: center;
     flex-direction: column;
-    margin-left: 20vw;
+    padding-top: 13vh;
+    margin-top: 8vh ;
 }
 .upper-section{
     display: flex;
@@ -123,7 +130,7 @@ section{
 }
 .input-div{
   height: 20vh;
-  width:50vw;
+  width:70vw;
   padding: 10px;
   background-color: white;
   display: flex;
@@ -131,13 +138,14 @@ section{
   align-items: center;
   gap: 10px;
   border-radius: 0.5rem;
-  box-shadow: rgba(13, 13, 15, 0.15) 0px 4px 40px 1px;;
+  box-shadow: rgba(13, 13, 15, 0.15) 0px 4px 40px 1px;
+  position:relative;
 }
 input{
     height: 15vh;
     width: 50vw;
     border: 2px solid rgba(255, 154, 90);
-    border-radius: 30px ;
+    border-radius: 10px ;
     font-size: 1.5rem;
     font-family: 'Kanit';
     font-weight: 400;
@@ -145,8 +153,11 @@ input{
 }
 ::placeholder{
     font-family: 'Montserrat';
+    font-weight: 500;
     font-size: 1.2rem;
-    padding: 0 0 20px 0;
+    padding: 0;
+    position: absolute;
+    top: 15px; 
 }
 
 
@@ -175,22 +186,71 @@ input{
 }
 
 .background-circle{
-background: url('./assets/Ellipse_36_1.svg') 1vw 2.7vh / 918px no-repeat rgba(0, 0, 0, 0);
-background-image: url('./assets/Ellipse_36_1.svg');
-background-position-x: -24vw;
-background-position-y: 2.7vh;
-background-size: 918px;
-background-repeat-x: no-repeat;
-background-repeat-y: no-repeat;
-background-attachment: initial;
-background-origin: initial;
-background-clip: initial;
-background-color: rgba(231, 7, 7, 0);
-inset: 0px;
-opacity: 0.05;
-pointer-events: none;
-position: absolute;
-overflow: hidden;
-z-index: -1;
-filter: drop-shadow(60px 0px 100px purple);
+  background: url('./assets/Ellipse_36_1.svg') 1vw 2.7vh / 918px no-repeat rgba(0, 0, 0, 0);
+  background-position-x: -24vw;
+  background-position-y: 2.7vh;
+  background-size: 918px;
+  background-repeat-x: no-repeat;
+  background-repeat-y: no-repeat;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: rgba(231, 7, 7, 0);
+  inset: 0px;
+  opacity: 0.05;
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+}
+
+.answerDiv{
+  height: 100vh;
+  width: 100vw;
+}
+
+@media (max-width:1000px){
+  nav{
+    height: 10vh;
+  }
+  nav img{
+    height: 10vh;
+  }
+  .login{
+    font-size: 3rem;
+    border-radius: 30px;
+    padding: 0 3rem;
+  }
+  section{
+    width: 100vw;
+    padding: 0;
+    justify-content: center;  
+    align-items: center;
+  }
+  .upper-section{
+    margin: 10rem 0 20rem 0;
+  }
+  .upper-section h1{
+    font-size: 6.5rem;
+    padding-left: 2rem;
+  }
+  .upper-section p {
+    font-size: 4rem;
+    padding-left: 2rem;
+  }
+  .input-div{
+    width: 90%;
+    height: 20vh;
+    border-radius: 20px;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+  .input-div input{
+    height: 50%;
+    width: calc(90% - 7rem);
+    border: 6px solid rgba(255, 154, 90);
+  }
+  ::placeholder{
+    font-size: 2.5rem;
+  }
 }

@@ -1,10 +1,11 @@
-import PocketBase from './node_modules/pocketbase/dist/pocketbase.es.mjs';
+
 const apiURL = "https://top-g.pockethost.io/api/collections/qna/records"
-const pb = new PocketBase('https://top-g.pockethost.io');
 const loginBtn = document.getElementById('login');
 let newDiv = document.createElement("div");
+let answerDiv = document.createElement("div");
 const questionField = document.getElementById('question');
 const search = document.getElementById('search');
+let ol = document.createElement('ol');
 
 newDiv.innerHTML = `<div class="overlay"></div>
 <div class="loginform">
@@ -27,6 +28,7 @@ const overlay = newDiv.querySelector('.overlay');
 const closeBtn = newDiv.querySelector('img');
 
 
+
 async function searchQuestion(searchTerm) {
     // Convert the search term to lowercase for case-insensitive search
     const searchTermLower = searchTerm.toLowerCase();
@@ -38,28 +40,44 @@ async function searchQuestion(searchTerm) {
         item.questions.toLowerCase().includes(searchTermLower)
     );
 
+    const matchingQuestions = [];
+    matchingItems.forEach(item => {
+        matchingQuestions.push(item.questions);
+    });
     // Extract the answers corresponding to the matching questions
     const matchingAnswers = matchingItems.map(item => item.answers);
     console.log(`Search results for "${searchTerm}":`,matchingAnswers);
     
-      
+    
+    
+    
 }
+
+function renderAnswer(){
+    matchingQuestions.forEach((question, index) => {
+        const answer = matchingAnswers[index];
+        const li = document.createElement('li');
+        li.innerHTML = `<h3>${question}</h3><p>${answer}</p>`;
+        ol.appendChild(li);
+    });
+    answerDiv.appendChild(ol);
+}
+
+
 
 search.addEventListener('click', () => {
     const searchTerm = questionField.value;
     searchQuestion(searchTerm);
+    document.body.appendChild(answerDiv);
 })
 
 loginBtn.addEventListener('click', () => {
     document.body.appendChild(newDiv);
-    console.log("login button")
 })
 
 closeBtn.addEventListener('click', () => {
     document.body.removeChild(newDiv);
-    console.log("login button")
 })
 overlay.addEventListener('click', () => {
     document.body.removeChild(newDiv);
-    console.log("login button")
 })

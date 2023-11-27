@@ -102,10 +102,8 @@ nav img{
 }
 
 main{
-  /* background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%); */
-  /* background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%); */
   background-color: #fffafc;
-background-image: linear-gradient(180deg, #fffafc 0%, #eff5f4 16%, #ff9a5a 100%);
+  background-image: linear-gradient(180deg, #fffafc 0%, #eff5f4 16%, #f8d4be 100%);
 
 
 }

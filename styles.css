@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200&family=Montserrat:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Poppins:wght@100;200;300;400;600&family=Roboto+Slab&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;600;700&family=Montserrat:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Poppins:wght@100;200;300;400;600&family=Roboto+Slab&display=swap');
 html{
   scroll-behavior: smooth;
 }
@@ -49,6 +48,7 @@ form div{
   height: 35px;
   margin-bottom: 1rem;
 }
+
 nav{
   height: 13vh;
   width: 100vw;
@@ -102,26 +102,34 @@ nav img{
 }
 
 main{
-  position: relative;
-  overflow: visible;
+  /* background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%); */
+  /* background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%); */
+  background-color: #fffafc;
+background-image: linear-gradient(180deg, #fffafc 0%, #eff5f4 16%, #ff9a5a 100%);
+
+
 }
 section{
-    height: calc(85vh - 8vh);
-    width: 100vw;
+    height: calc(87vh - 8vh);
+    width: calc(100vw - 5px);
     display: inline-flex;
     align-items: center;
     flex-direction: column;
     padding-top: 13vh;
     margin-top: 8vh ;
-}
+} 
 .upper-section{
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
     font-size: 2rem;
+    width: 70vw;
+    text-align: center;
 }
 .upper-section h1{
   font-size: 2.4rem;
+  font-family: 'Poppins';
+  font-weight: 600;
   margin: 0;
 }
 .upper-section p{
@@ -133,31 +141,30 @@ section{
   width:70vw;
   padding: 10px;
   background-color: white;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  border-radius: 0.5rem;
-  box-shadow: rgba(13, 13, 15, 0.15) 0px 4px 40px 1px;
+  gap: 50px;
+  border-radius: 5rem;
+  box-shadow: rgba(255, 255, 255, 0.6) 0px 4px 40px 1px;
   position:relative;
 }
 input{
     height: 15vh;
     width: 50vw;
     border: 2px solid rgba(255, 154, 90);
-    border-radius: 10px ;
+    border-radius: 5rem ;
     font-size: 1.5rem;
     font-family: 'Kanit';
     font-weight: 400;
-    padding-left: 20px;
+    padding:0;
 }
+
 ::placeholder{
     font-family: 'Montserrat';
     font-weight: 500;
+    padding-left: 10px;
     font-size: 1.2rem;
-    padding: 0;
-    position: absolute;
-    top: 15px; 
 }
 
 
@@ -185,29 +192,18 @@ input{
   transform: scale(1.05) rotate(-1deg);
 }
 
-.background-circle{
-  background: url('./assets/Ellipse_36_1.svg') 1vw 2.7vh / 918px no-repeat rgba(0, 0, 0, 0);
-  background-position-x: -24vw;
-  background-position-y: 2.7vh;
-  background-size: 918px;
-  background-repeat-x: no-repeat;
-  background-repeat-y: no-repeat;
-  background-attachment: initial;
-  background-origin: initial;
-  background-clip: initial;
-  background-color: rgba(231, 7, 7, 0);
-  inset: 0px;
-  opacity: 0.05;
-  pointer-events: none;
-  position: absolute;
-  z-index: -1;
-}
-
 .answerDiv{
   height: 100vh;
   width: 100vw;
 }
+::-webkit-scrollbar {
+  width: 5px; 
+}
 
+::-webkit-scrollbar-thumb {
+  background-color: rgba(150, 139, 139, 0.5);
+  border-radius: 10px; 
+}
 @media (max-width:1000px){
   nav{
     height: 10vh;

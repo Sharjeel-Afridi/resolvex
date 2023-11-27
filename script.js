@@ -49,11 +49,6 @@ async function searchQuestion(searchTerm) {
     console.log(`Search results for "${searchTerm}":`,matchingAnswers);
     
     
-    
-    
-}
-
-function renderAnswer(){
     matchingQuestions.forEach((question, index) => {
         const answer = matchingAnswers[index];
         const li = document.createElement('li');
@@ -61,7 +56,10 @@ function renderAnswer(){
         ol.appendChild(li);
     });
     answerDiv.appendChild(ol);
+    
 }
+
+
 
 
 
